@@ -1,4 +1,4 @@
-function Button({contador, texto = "Botão", numero = 0, tipo}) {
+function Button({contador, texto = "Botão", numero = 0, tipo = "button", novoPokemon, enviarPokemon}) {
 
     function evento(e){
         e.preventDefault()
@@ -9,6 +9,8 @@ function Button({contador, texto = "Botão", numero = 0, tipo}) {
             }else{
                 contador(0)
             }
+        }if(enviarPokemon){
+            enviarPokemon(novoPokemon)
         }
 
     }
