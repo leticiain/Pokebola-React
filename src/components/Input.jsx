@@ -5,7 +5,7 @@ function Input({legenda, tipo}) {
     }        
 
     return (  
-        <input type={tipo} placeholder={legenda} onChange={imprimirInput}/>
+        <input type={tipo} className="col-sm-6" placeholder={legenda} onChange={imprimirInput}/>
     );
 }
 
