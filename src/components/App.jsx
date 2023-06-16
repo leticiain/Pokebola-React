@@ -1,9 +1,11 @@
 import Counter from "./Counter";
 import Form from "./Form";
 import Header from "./Header";
-import Pokedex from "./Pokedex";
+import Pokebola from "./Pokebola";
 
 function App() {
+
+  let condicional = true
 
   return ( 
     <div className="App">
@@ -20,15 +22,20 @@ function App() {
           </div>
 
           <div className="col-sm">
-            <Counter />
+            <Counter isLoading={false}/>
           </div>
 
         </div>
+        
+        <div className="row">
+          {condicional ? <Pokebola /> : <p>Carregando...</p>}
+        </div>
+        
       </div>
+      
 
-      
-      <Pokedex />
-      
+
+
     </div>
   );
 }

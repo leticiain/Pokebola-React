@@ -1,16 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from './Button';
 
-function Counter() {
+function Counter({isLoading}) {
 
     const [counter, setCounter] = useState(0)
 
+    //Incrementa o contador
     const updateCounter = num => {
         setCounter(counter + num)
     }
 
+    //Zera o contador
     const eraseCounter = num => {
         setCounter(num)
+    }
+
+    if(isLoading){
+        return <p>Carregando...</p>
     }
 
     return (  
