@@ -1,3 +1,4 @@
+import Pokedex from "./ Pokedex";
 import Counter from "./Counter";
 import Form from "./Form";
 import Header from "./Header";
@@ -33,7 +34,7 @@ function App() {
         
       </div>
       
-
+      <Pokedex />
 
 
     </div>
